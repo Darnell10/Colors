@@ -6,4 +6,6 @@
     <string name="title">Title</string>
     <string name="id">ID</string>
     <string name="an_error_occured_while_loading_data">An Error occured while Loading data</string>
+    <string name="detail_title">Detail Title</string>
+    <string name="detail_id">Detail Id</string>
 </resources>
