@@ -25,6 +25,7 @@
             tools:src="@tools:sample/avatars"
             android:contentDescription="TODO" />
 
+
         <TextView
             android:id="@+id/detail_id"
             android:layout_width="126dp"
