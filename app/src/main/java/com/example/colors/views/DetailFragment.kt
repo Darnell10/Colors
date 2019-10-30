@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.AndroidViewModel
 
 import com.example.colors.R
 
@@ -13,6 +14,8 @@ import com.example.colors.R
  * A simple [Fragment] subclass.
  */
 class DetailFragment : Fragment() {
+
+    private var colorUuid = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
