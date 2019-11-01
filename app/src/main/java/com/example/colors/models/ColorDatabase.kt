@@ -8,6 +8,7 @@ import java.util.concurrent.locks.Lock
 
 @Database(entities = arrayOf(ColorModel::class), version = 1, exportSchema = false)
 abstract class ColorDatabase : RoomDatabase() {
+    abstract fun colorDao():ColorDao
 
     companion object {
         @Volatile
