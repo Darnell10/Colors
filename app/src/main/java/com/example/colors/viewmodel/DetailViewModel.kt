@@ -20,4 +20,3 @@ class DetailViewModel(application: Application) : BaseViewModel(application) {
 
 }
 
-// just trying to fix this push
