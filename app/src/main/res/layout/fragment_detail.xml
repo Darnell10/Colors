@@ -4,10 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     >
 
+    <data>
+        <variable
+            name="color"
+            type="com.example.colors.models.ColorModel" />
+
+        <variable
+            name="palette"
+            type="com.example.colors.models.ColorPalette" />
+    </data>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@{palette.color}"
         tools:context=".views.DetailFragment"
         >
 
@@ -23,6 +34,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars"
+            android:imageUrl="@{color.url}"
             android:contentDescription="TODO" />
 
 
@@ -31,7 +43,7 @@
             android:layout_width="126dp"
             android:layout_height="29dp"
             android:layout_marginBottom="346dp"
-            android:text="@string/detail_id"
+            android:text="@{color.id}"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp"
@@ -45,7 +57,7 @@
             android:id="@+id/detail_title"
             android:layout_width="393dp"
             android:layout_height="285dp"
-            android:text="@string/detail_title"
+            android:text="@{color.title}"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp"
