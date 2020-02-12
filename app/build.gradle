@@ -13,7 +13,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.colors"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -59,7 +59,7 @@ dependencies {
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
     kapt "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1"
 
     //navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
@@ -87,7 +87,7 @@ dependencies {
     implementation "androidx.preference:preference:$preferencesVersion"
 
     //FireBase
-    implementation "com.google.firebase:firebase-core:16.0.8"
+    implementation "com.google.firebase:firebase-core:17.2.2"
 
     //MutiDex
     implementation "com.android.support:multidex:1.0.3"
