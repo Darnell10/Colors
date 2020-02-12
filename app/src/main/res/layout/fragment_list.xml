@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".views.ListFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-      android:id="@+id/refresh_layout"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.ListFragment">
 
-      <androidx.constraintlayout.widget.ConstraintLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
-
-
-          <androidx.recyclerview.widget.RecyclerView
-              android:id="@+id/recycler_view"
-              android:layout_width="0dp"
-              android:layout_height="0dp"
-              app:layout_constraintBottom_toTopOf="parent"
-              app:layout_constraintEnd_toStartOf="parent"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
-          <TextView
-              android:id="@+id/listError"
-              android:layout_width="233dp"
-              android:layout_height="20dp"
-              android:text="@string/an_error_occured_while_loading_data"
-              app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-              app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintTop_toTopOf="@+id/recycler_view"
-              app:layout_constraintVertical_bias="0.0" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
-          <androidx.core.widget.ContentLoadingProgressBar
-              android:id="@+id/loadingView"
-              android:layout_width="90dp"
-              android:layout_height="80dp"
-              app:layout_constraintBottom_toBottomOf="parent"
-              app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintTop_toTopOf="@+id/recycler_view" />
+            <TextView
+                android:id="@+id/listError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="An Error occured while Loading data "
+                app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recycler_view" />
 
-      </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/loadingView"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recycler_view" />
 
-  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </layout>

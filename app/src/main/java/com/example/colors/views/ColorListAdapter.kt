@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.colors.R
 import com.example.colors.databinding.ItemViewBinding
@@ -38,7 +39,10 @@ class ColorListAdapter(val colorList: ArrayList<ColorModel>) :
     }
 
     override fun onColorClick(v: View) {
-
+        val uuid = v.id_view.text.toString().toInt()
+        val action = ListFragmentDirections.actionListFragmentToDetailFragment()
+        action.colorUuid = uuid
+        Navigation.findNavController(v).navigate(action)
 
     }
 
